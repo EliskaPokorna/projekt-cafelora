@@ -38,6 +38,8 @@ nav a:hover {
     padding: 1rem;
     background-color: #301a1a;
     z-index: 1;
+
+
 }
 
 .rollout-nav a {
@@ -60,7 +62,21 @@ nav a:hover {
     background-color: transparent;
     background-image: url("./img/menu.png");
     background-size: contain;
-    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .rollout-nav {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+    }
+
+    .nav-btn {
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
 }
 
 @media (min-width: 768px) {
