@@ -8,12 +8,18 @@ import { Footer } from '../components/Footer/Footer';
 import '../global.css';
 import './index.css';
 
+const response = await fetch("http://localhost:4000/api/drinks")
+const json = await response.json()
+const cafelora = json.data
+
+console.log(cafelora)
+
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <Header />
     <main>
       <Banner />
-      <Menu />
+      <Menu drinks={cafelora} />
       <Gallery />
       <Contact />
     </main>
