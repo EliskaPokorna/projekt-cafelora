@@ -51,10 +51,10 @@ orderForms.forEach(form => {
   orderButton.addEventListener('click', async (event) => {
     event.preventDefault();
 
-    const drink = cafelora.find(d => d.id === drinkId);
-    const currentOrderedState = drink.ordered;
+    //const drink = cafelora.find(d => d.id === drinkId);
+    //const currentOrderedState = drink.ordered;
 
-    const data = [{ op: 'replace', path: '/ordered', value: !currentOrderedState }]
+    const data = [{ op: 'replace', path: '/ordered', value: ftrue }]
 
     const response2 = await fetch(`http://localhost:4000/api/drinks/${drinkId}`, {
       method: 'PATCH',
